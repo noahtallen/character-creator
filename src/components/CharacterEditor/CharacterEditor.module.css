@@ -32,3 +32,33 @@
 .controlColumn {
   width: 50%;
 }
+
+@media (max-width: 850px) {
+  /* Would need to be in a different DOM position to display well. */
+  .header {
+    display: none;
+  }
+
+  .characterWrapper {
+    width: 100%;
+    position: absolute;
+    top: 0;
+  }
+
+  .controlColumn {
+    position: absolute;
+    bottom: 16px;
+    width: 100%;
+    white-space: nowrap;
+    overflow-x: scroll;
+    display: flex;
+    flex-direction: row;
+    z-index: 1;
+    padding: 4px;
+  }
+
+  .characterEditor {
+    height: 100vh;
+    padding: 8px 0;
+  }
+}
